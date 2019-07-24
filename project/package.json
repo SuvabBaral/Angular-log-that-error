@@ -1,0 +1,34 @@
+{
+  "name": "log-that-error",
+  "version": "0.0.4",
+  "description":
+  "An angular library that is used to handle the errors by logging it to a backend/server so that the admin can be notified.",
+  "authors":" Suvab Baral and Sanjay Murugan",
+  "keywords":
+  [
+    "angular",
+    "error",
+    "typescript",
+    "log",
+    "javascript",
+    "logging error"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^8.0.1",
+    "@angular/core": "^8.0.1",
+    "extract-stack": "^2.0.0",
+    "bootstrap": "^4.3.1",
+    "guid-typescript": "^1.0.9"
+
+  },
+  "devDependencies":{
+    "extract-stack": "^2.0.0",
+    "bootstrap": "^4.3.1",
+    "guid-typescript": "^1.0.9"
+  
+
+  }
+ 
+ 
+  
+}
