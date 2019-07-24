@@ -1,0 +1,26 @@
+import { Injectable, ErrorHandler } from "@angular/core";
+import { ErrorHandlerService } from './error-handler.service';
+
+
+
+@Injectable({
+    providedIn: 'root'
+})
+export class GlobalErrorHandler implements ErrorHandler{
+    err : any;
+    constructor(private ErrorHandlerService : ErrorHandlerService){
+    }
+    handleError(error : any){
+        this.err=error;
+        var temp = document.createElement("div");
+        var att= document.createAttribute("class");
+        att.value="alert alert-danger fixed-top";
+        temp.setAttributeNode(att);
+        temp.appendChild(document.createTextNode('Sorry! A ERROR OCCURED. Please contact you service provider.'));
+        document.body.appendChild(temp);
+        //Passsing the error message and ErrorDetail to the event
+        this.ErrorHandlerService.onNotify(this.err+' ' , this.err);
+      console.log("An error occured\n" +this.err+'\n\nSubscribe to the errorEvent, set the URL for your REST API using setURL() method and Call the enterInDB() method to notify the Server/Admin')
+        
+    }
+}
